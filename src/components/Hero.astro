@@ -1,0 +1,47 @@
+---
+import Services from '../assets/svg/services.svg';
+import Obras from '../assets/svg/obras.svg';
+import Mantenimiento from '../assets/svg/mantenimiento.svg';
+---
+
+
+<section class="w-full min-h-screen bg-[#0f0e17] flex flex-col md:flex-row items-center justify-between  md:px-30  gap-20">
+
+  <!-- Columna izquierda: Texto -->
+<div class="flex-1 text-[#fffffe]">
+    <div class="flex flex-col items-start justify-center space-y-4">
+        <h1 class="text-4xl md:text-6xl font-bold">Bienvenido a Mar-Otec</h1>
+        <p class="text-lg md:text-xl text-[#a7a9be]">Capacitaciones y Certificaciones en Instalaciones Energizadas.</p>
+    </div>
+
+    
+    <div class="mt-20">
+        <div class="flex flex-row gap-20 items-center justify-start">
+            <div class="flex flex-col items-center text-center">
+                <Services class="size-10 text-[#878787]" />
+                <span class="text-xl font-bold">Servicios</span>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <Mantenimiento class="size-10 text-white" />
+                <span class="text-xl font-bold">Mantenimiento</span>
+            </div>
+            <div class="flex flex-col items-center text-center">
+                <Obras class="size-10 text-[#002C5F]" />
+                <span class="text-xl font-bold">Obras</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-20 flex">
+        <a href="/servicios" class="bg-[#ff8906] text-xl font-bold text-[#fffffe] px-17 py-4 rounded-full hover:bg-[#B56104] transition w-fit">
+            Nuestros Servicios
+        </a>
+    </div>
+
+</div>
+
+  <!-- Columna derecha: Imagen -->
+  <div class="flex-1 min-h-[calc(100vh-50px)] w-full bg-[url('/images/hero.webp')] bg-cover bg-center rounded-none md:rounded-xl shadow-none md:shadow-lg">
+  </div>
+
+</section>
