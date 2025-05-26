@@ -1,14 +1,39 @@
+---
+import './src/styles/global.css'
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<title>Mar-Otec</title>
+
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+
+		<meta name= "description" content="Empresa que realiza capacitaciones y certificaciones en instalaciones energizadas."/>
+		
+		<meta property="og:url" content="https://mar-otec.cl/"/>
+		<meta property="og:type" content = "website" />
+		<meta property="og:title" content = "Mar Otec Capacitaciones" />
+		<meta property="og:description" content = "Empresa que realiza capacitaciones y certificaciones en instalaciones energizadas." />
+		<meta property="og:image" content = ""/>
+		<meta property="og:locale" content = "es_ES"/>
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@mar_otec" />
+		<meta name="twitter:title" content="Mar Otec Capacitaciones" />
+		<meta name="twitter:description" content="Empresa que realiza capacitaciones y certificaciones en instalaciones energizadas." />
+		<meta name="twitter:creator" content="@joaquiv" />
 	</head>
 	<body>
-		<slot />
+		<Header />
+		<main>
+			<slot />
+		</main>
+		<Footer />
 	</body>
 </html>
 
@@ -18,5 +43,9 @@
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		background:#002C5F ;
+	}
+	main{
+		min-height: 100vh;
 	}
 </style>
