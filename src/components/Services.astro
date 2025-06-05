@@ -6,6 +6,16 @@ import Flecha from '../assets/svg/flecha.svg';
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
+<style is:inline>
+  .swiper {
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+</style>
 <section
   id="services"
   class="min-h-screen flex items-center justify-center bg-[linear-gradient(#ECEFFE,#CED6FB)]"
@@ -69,8 +79,8 @@ import Flecha from '../assets/svg/flecha.svg';
   
   <script is:inline>
   document.addEventListener('DOMContentLoaded', function () {
-    new Swiper('.card-wrapper', {
-  loop: true,
+    new Swiper('.swiper', {
+      loop: true,
 
   //pagination
   pagination: {
