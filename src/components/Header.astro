@@ -9,7 +9,7 @@ import Phone from "../assets/svg/phone.svg";
 
 <header>
   <!-- Header top (verde-azul) -->
-  <div class="w-full bg-[#18343b] text-white pt-[18px] pb-[55px]">
+  <div class="header-top w-full bg-[#0f0e17] text-white pt-[18px] pb-[55px] transition-all duration-200">
     <div
       class="max-w-6xl mx-auto w-full flex items-center justify-between px-4"
     >
@@ -70,56 +70,57 @@ import Phone from "../assets/svg/phone.svg";
 
   <!-- Header bottom (barra roja sticky, centrada y con logo) -->
   <div
-    class="header-bottom absolute z-20 left-1/2 transform -translate-x-1/2 top-[60px] w-full max-w-[1200px] font-['Montserrat'] text-[16px] leading-[1.6] box-border"
+    class="header-bottom fixed z-20 left-1/2 transform -translate-x-1/2 top-[60px] w-full max-w-[1200px] text-[16px] leading-[1.6] box-border transition-all duration-200"
   >
     <div class="container w-full">
       <div
-        class="header-bottom-row flex items-center justify-between bg-[#D62E4C]"
+        class="header-bottom-row flex items-center justify-between bg-[#ff8906]"
       >
         <div
-          class="header-logo flex items-center justify-center pt-[15px] pr-[60px] pb-[15px] pl-[40px] bg-white [clip-path:polygon(0px_0px,100%_0%,82.68%_101.20%,0px_100%)]"
+          class="header-logo flex items-center justify-center gap-5 pt-[15px] pr-[60px] pb-[15px] pl-[40px] bg-white [clip-path:polygon(0px_0px,100%_0%,82.68%_101.20%,0px_100%)]"
         >
-          <a href="#">
+          <a href="#Hero">
             <img src="/images/logo.webp" alt="Construction" class="h-12" />
           </a>
-          
+          <span class="text-[#18343b] text-lg font-bold">Mar-Otec</span>
+
         </div>
         <nav class="header-nav block">
-          <ul class="flex gap-8">
+          <ul class="flex item-center justify-between gap-10 px-15 text-lg font-medium text-[#fff]]">
             <li>
               <a
-                class="anchor-link hover:text-[#ff8906] transition"
-                href="#s-about">About us</a
+                class="hover:text-[#fffffe] transition"
+                href="#hero">Inicio</a
               >
             </li>
             <li>
               <a
-                class="anchor-link hover:text-[#ff8906] transition"
-                href="#s-services">Services</a
+                class="hover:text-[#fffffe] transition"
+                href="#services">Servicios</a
               >
             </li>
             <li>
               <a
-                class="anchor-link hover:text-[#ff8906] transition"
-                href="#s-gallery">Gallery</a
+                class="hover:text-[#fffffe] transition"
+                href="#s-services">Sobre Nosotros</a
               >
             </li>
             <li>
               <a
-                class="anchor-link hover:text-[#ff8906] transition"
-                href="#s-team">Our team</a
+                class="hover:text-[#fffffe] transition"
+                href="#s-gallery">Clientes</a
               >
             </li>
             <li>
               <a
-                class="anchor-link hover:text-[#ff8906] transition"
-                href="#s-testimonials">Testimonials</a
+                class="hover:text-[#fffffe] transition"
+                href="#s-testimonials">Clientes</a
               >
             </li>
             <li>
               <a
-                class="anchor-link hover:text-[#ff8906] transition"
-                href="#s-contact">Contact</a
+                class="hover:text-[#fffffe] transition"
+                href="#s-contact">Contacto</a
               >
             </li>
           </ul>
@@ -128,3 +129,34 @@ import Phone from "../assets/svg/phone.svg";
     </div>
   </div>
 </header>
+
+<script>
+  let lastScroll = 0;
+  const headerTop = document.querySelector('.header-top');
+  const headerBottom = document.querySelector('.header-bottom');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+
+    // Si hacemos scroll hacia abajo y pasamos los 100px
+    if (currentScroll > 50) {
+      headerTop.style.transform = 'translateY(-100%)';
+      headerBottom.style.top = '0';
+      headerBottom.style.position = 'fixed';
+    } else {
+      // Volvemos a la posición original
+      headerTop.style.transform = 'translateY(0)';
+      headerBottom.style.top = '60px';
+    }
+
+    lastScroll = currentScroll;
+  });
+</script>
+
+<style>
+  .header-top {
+    position: relative;
+    z-index: 10;
+  }
+</style>
+
