@@ -1,265 +1,90 @@
+---
+import Flecha from '../assets/svg/flecha.svg';
+---
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 <section
   id="services"
-  class="w-full min-h-screen bg-[#fffffe] py-40 px-6 text-[#0f0e17]"
+  class="min-h-screen flex items-center justify-center bg-[linear-gradient(#ECEFFE,#CED6FB)]"
 >
-  <div class="max-w-6xl mx-auto">
-    <!-- TÍTULO -->
-    <div class="mb-10">
-      <h2 class="text-4xl md:text-6xl font-bold mb-4">Nuestros Servicios</h2>
-    </div>
 
-    <!-- Carrusel de servicios-->
-    <div class="relative py-12">
-      <!-- FLECHA IZQUIERDA  -->
-      <button
-        id="left-arrow"
-        class="absolute left-1 top-1/2 -translate-y-1/2 z-20 bg-[#ff8906] p-2 rounded-full shadow-md hover:bg-[#B56104] cursor-pointer transition-colors duration-200 px-4"
-      >
-        <span class="text-lg">←</span>
-      </button>
-
-      <div class="overflow-x-hidden mx-16">
-        <!-- Contenedor de tarjetas -->
-        <div
-          id="carousel"
-          class="flex gap-6 transition-transform duration-300 ease-in-out"
-          style="width: fit-content;"
-        >
-          <!-- TARJETA 1-->
-          <div
-            class="min-w-[calc((100%-3rem)/3)] max-w-[calc((100%-3rem)/3)] h-[420px] bg-[#0f0e17] rounded-lg shadow-md overflow-hidden flex-shrink-0 scroll-snap-align-start"
-          >
-            <!-- Imagen con efecto hover -->
-            <div class="relative h-[240px] group">
-              <img
-                src="/images/hero.webp"
-                alt="Electrica"
-                class="object-cover w-full h-full transition duration-300 group-hover:brightness-75"
-              />
-
-              <!-- Botón al hacer hover -->
-              <button
-                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"
-              >
-                <span
-                  class="bg-[#001F54] text-white px-7 py-3 rounded-lg text-sm font-semibold cursor-pointer"
-                  >Más información</span
-                >
-              </button>
-            </div>
-
-            <!-- Texto inferior -->
-            <div class="flex flex-col justify-center items-start px-5 py-4">
-              <h3 class="text-lg font-bold text-[#fffffe] mb-1">Electrica</h3>
-              <p class="text-sm text-[#a7a9be]">
-                lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-
-          <!-- TARJETA 2-->
-          <div
-            class="min-w-[calc((100%-3rem)/3)] max-w-[calc((100%-3rem)/3)] h-[420px] bg-[#0f0e17] rounded-lg shadow-md overflow-hidden flex-shrink-0 scroll-snap-align-start"
-          >
-            <!-- Imagen con efecto hover -->
-            <div class="relative h-[240px] group">
-              <img
-                src="/images/hero.webp"
-                alt="Electrica"
-                class="object-cover w-full h-full transition duration-300 group-hover:brightness-75"
-              />
-
-              <!-- Botón al hacer hover -->
-              <button
-                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"
-              >
-                <span
-                  class="bg-[#001F54] text-white px-7 py-3 rounded-lg text-sm font-semibold cursor-pointer"
-                  >Más información</span
-                >
-              </button>
-            </div>
-
-            <!-- Texto inferior -->
-            <div class="flex flex-col justify-center items-start px-5 py-4">
-              <h3 class="text-lg font-bold text-[#fffffe] mb-1">Electrica</h3>
-              <p class="text-sm text-[#a7a9be]">
-                lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-
-          <!-- TARJETA 3-->
-          <div
-            class="min-w-[calc((100%-3rem)/3)] max-w-[calc((100%-3rem)/3)] h-[420px] bg-[#0f0e17] rounded-lg shadow-md overflow-hidden flex-shrink-0 scroll-snap-align-start"
-          >
-            <!-- Imagen con efecto hover -->
-            <div class="relative h-[240px] group">
-              <img
-                src="/images/hero.webp"
-                alt="Electrica"
-                class="object-cover w-full h-full transition duration-300 group-hover:brightness-75"
-              />
-
-              <!-- Botón al hacer hover -->
-              <button
-                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"
-              >
-                <span
-                  class="bg-[#001F54] text-white px-7 py-3 rounded-lg text-sm font-semibold cursor-pointer"
-                  >Más información</span
-                >
-              </button>
-            </div>
-
-            <!-- Texto inferior -->
-            <div class="flex flex-col justify-center items-start px-5 py-4">
-              <h3 class="text-lg font-bold text-[#fffffe] mb-1">Electrica</h3>
-              <p class="text-sm text-[#a7a9be]">
-                lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-
-          <!-- TARJETA 4-->
-          <div
-            class="min-w-[calc((100%-3rem)/3)] max-w-[calc((100%-3rem)/3)] h-[420px] bg-[#0f0e17] rounded-lg shadow-md overflow-hidden flex-shrink-0 scroll-snap-align-start"
-          >
-            <!-- Imagen con efecto hover -->
-            <div class="relative h-[240px] group">
-              <img
-                src="/images/hero.webp"
-                alt="Electrica"
-                class="object-cover w-full h-full transition duration-300 group-hover:brightness-75"
-              />
-
-              <!-- Botón al hacer hover -->
-              <button
-                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"
-              >
-                <span
-                  class="bg-[#001F54] text-white px-7 py-3 rounded-lg text-sm font-semibold cursor-pointer"
-                  >Más información</span
-                >
-              </button>
-            </div>
-
-            <!-- Texto inferior -->
-            <div class="flex flex-col justify-center items-start px-5 py-4">
-              <h3 class="text-lg font-bold text-[#fffffe] mb-1">Electrica</h3>
-              <p class="text-sm text-[#a7a9be]">
-                lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-
-          <!-- TARJETA 5-->
-          <div
-            class="min-w-[calc((100%-3rem)/3)] max-w-[calc((100%-3rem)/3)] h-[420px] bg-[#0f0e17] rounded-lg shadow-md overflow-hidden flex-shrink-0 scroll-snap-align-start"
-          >
-            <!-- Imagen con efecto hover -->
-            <div class="relative h-[240px] group">
-              <img
-                src="/images/hero.webp"
-                alt="Electrica"
-                class="object-cover w-full h-full transition duration-300 group-hover:brightness-75"
-              />
-
-              <!-- Botón al hacer hover -->
-              <button
-                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"
-              >
-                <span
-                  class="bg-[#001F54] text-white px-7 py-3 rounded-lg text-sm font-semibold cursor-pointer"
-                  >Más información</span
-                >
-              </button>
-            </div>
-
-            <!-- Texto inferior -->
-            <div class="flex flex-col justify-center items-start px-5 py-4">
-              <h3 class="text-lg font-bold text-[#fffffe] mb-1">Electrica</h3>
-              <p class="text-sm text-[#a7a9be]">
-                lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- FLECHA DERECHA -->
-      <button
-        id="right-arrow"
-        class="absolute right-1 top-1/2 -translate-y-1/2 z-20 bg-[#ff8906] p-2 rounded-full shadow-md hover:bg-[#B56104] cursor-pointer transition-colors duration-200 px-4"
-      >
-        <span class="text-lg font-bold">→</span>
-      </button>
+  
+  <!-- CARDS DE SERVICIOS -->
+  <div class="container swiper">
+    <div class="card-wrapper flex items-center justify-center min-h-screen">
+      <ul class="card-list swiper-wrapper">
+        <li class="card-item swiper-slide">
+            <a href="#" class="group block w-[400px] bg-white p-[18px] rounded-[12px] no-underline border-[2px] border-transparent hover:border-[#5372F0] transition-all duration-300 ease-in-out">
+              <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]">
+              <h3 class="my-5 text-lg  md:text-xl font-bold">Servicio 1</h3>
+              <p class="text-lg md:text-xl text-[#a7a9be]">Descripción del servicio 1.</p>
+              <button><Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" /></button>
+            </a>    
+        </li>
+        <li class="card-item swiper-slide">
+            <a href="#" class="group block w-[400px] bg-white p-[18px] rounded-[12px] no-underline border-[2px] border-transparent hover:border-[#5372F0] transition-all duration-300 ease-in-out">
+              <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]">
+              <h3 class="my-5 text-lg  md:text-xl font-bold">Servicio 2</h3>
+              <p class="text-lg md:text-xl text-[#a7a9be]">Descripción del servicio 2.</p>
+              <button><Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" /></button>
+            </a>    
+        </li>
+        <li class="card-item swiper-slide">
+            <a href="#" class="group block w-[400px] bg-white p-[18px] rounded-[12px] no-underline border-[2px] border-transparent hover:border-[#5372F0] transition-all duration-300 ease-in-out">
+              <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]">
+              <h3 class="my-5 text-lg  md:text-xl font-bold">Servicio 3</h3>
+              <p class="text-lg md:text-xl text-[#a7a9be]">Descripción del servicio 3.</p>
+              <button><Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" /></button>
+            </a>    
+        </li>
+        <li class="card-item swiper-slide">
+            <a href="#" class="group block w-[400px] bg-white p-[18px] rounded-[12px] no-underline border-[2px] border-transparent hover:border-[#5372F0] transition-all duration-300 ease-in-out">
+              <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]">
+              <h3 class="my-5 text-lg  md:text-xl font-bold">Servicio 4</h3>
+              <p class="text-lg md:text-xl text-[#a7a9be]">Descripción del servicio 4.</p>
+              <button><Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" /></button>
+            </a>    
+        </li>
+        <li class="card-item swiper-slide">
+            <a href="#" class="group block w-[400px] bg-white p-[18px] rounded-[12px] no-underline border-[2px] border-transparent hover:border-[#5372F0] transition-all duration-300 ease-in-out">
+              <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]">
+              <h3 class="my-5 text-lg  md:text-xl font-bold">Servicio 5</h3>
+              <p class="text-lg md:text-xl text-[#a7a9be]">Descripción del servicio 5.</p>
+              <button><Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" /></button>
+            </a>    
+        </li>
+      </ul>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
   </div>
 
+
+  <!-- Swiper bundle desde CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
   <script is:inline>
-    document.addEventListener("DOMContentLoaded", function () {
-      const carousel = document.getElementById("carousel");
-      const leftArrow = document.getElementById("left-arrow");
-      const rightArrow = document.getElementById("right-arrow");
+  document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.card-wrapper', {
+  loop: true,
 
-      if (carousel && leftArrow && rightArrow) {
-        const cards = Array.from(carousel.children);
-        const card = cards[0];
+  //pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
 
-        // Obtener el gap del contenedor (24px = 1.5rem)
-        const gap = 24;
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 
-        // Calcular el ancho exacto incluyendo el gap
-        const cardWidth = card.offsetWidth + gap;
-        const containerWidth = carousel.parentElement.offsetWidth;
-        const visibleCards = 3;
-
-        let currentIndex = 0;
-        const maxIndex = cards.length - visibleCards;
-
-        const updateCarousel = () => {
-          // Aplicar el desplazamiento teniendo en cuenta el gap
-          const offset = -(currentIndex * cardWidth);
-          carousel.style.transform = `translateX(${offset}px)`;
-
-          // Actualizar estado de los botones con una transición más suave
-          leftArrow.style.opacity = currentIndex <= 0 ? "0.5" : "1";
-          leftArrow.style.pointerEvents = currentIndex <= 0 ? "none" : "auto";
-          rightArrow.style.opacity = currentIndex >= maxIndex ? "0.5" : "1";
-          rightArrow.style.pointerEvents =
-            currentIndex >= maxIndex ? "none" : "auto";
-        };
-
-        // Inicializar carrusel
-        updateCarousel();
-
-        leftArrow.addEventListener("click", () => {
-          if (currentIndex > 0) {
-            currentIndex--;
-            updateCarousel();
-          }
-        });
-
-        rightArrow.addEventListener("click", () => {
-          if (currentIndex < maxIndex) {
-            currentIndex++;
-            updateCarousel();
-          }
-        });
-
-        // Actualizar en caso de cambio de tamaño de ventana
-        window.addEventListener("resize", () => {
-          // Recalcular dimensiones al cambiar el tamaño
-          const newCardWidth = card.offsetWidth + gap;
-          currentIndex = Math.min(currentIndex, maxIndex);
-          updateCarousel();
-        });
-      }
-    });
+  })
+  });
   </script>
+
 </section>
