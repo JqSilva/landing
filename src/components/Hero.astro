@@ -4,44 +4,47 @@ import Obras from '../assets/svg/obras.svg';
 import Mantenimiento from '../assets/svg/mantenimiento.svg';
 ---
 
-
-<section class="w-full min-h-screen bg-[#0f0e17] flex flex-col md:flex-row items-center justify-between  md:px-30  gap-20">
-
+<section class="scroll-mt-15 w-full min-h-screen bg-[#0f0e17] flex flex-col md:flex-row items-center justify-between px-4 md:px-12 lg:px-24 gap-10 md:gap-20 py-16">
+  
   <!-- Columna izquierda: Texto -->
-<div class="flex-1 text-[#fffffe]">
-    <div class="flex flex-col items-start justify-center space-y-4">
-        <h1 class="text-4xl md:text-6xl font-bold">Bienvenido a Mar-Otec</h1>
-        <p class="text-lg md:text-xl text-[#a7a9be]">Capacitaciones y Certificaciones en Instalaciones Energizadas.</p>
+  <div class="flex-1 text-[#fffffe] w-full text-center md:text-left">
+    <div class="space-y-6">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+        Bienvenido a <span class="block md:inline">Mar-Otec</span>
+      </h1>
+      <p class="text-base sm:text-lg md:text-xl text-[#a7a9be] max-w-[600px] mx-auto md:mx-0">
+        Capacitaciones y Certificaciones en Instalaciones Energizadas.
+      </p>
     </div>
 
-    
-    <div class="mt-20">
-        <div class="flex flex-row gap-20 items-center justify-start">
-            <div class="flex flex-col items-center text-center">
-                <Services class="size-10 text-[#878787]" />
-                <span class="text-xl font-bold text-[#a7a9be] py-1">Servicios</span>
-            </div>
-            <div class="flex flex-col items-center text-center">
-                <Mantenimiento class="size-10 text-white" />
-                <span class="text-xl font-bold text-[#a7a9be] py-1">Mantenimiento</span>
-            </div>
-            <div class="flex flex-col items-center text-center">
-                <Obras class="size-10 text-[#002C5F]" />
-                <span class="text-xl font-bold text-[#a7a9be] py-1">Obras</span>
-            </div>
+    <!-- Íconos -->
+    <div class="mt-10 sm:mt-12 md:mt-16">
+      <div class="flex flex-wrap justify-center md:justify-start gap-10">
+        <div class="flex flex-col items-center text-center">
+          <Services class="size-10 text-[#878787]" />
+          <span class="text-lg sm:text-xl font-bold text-[#a7a9be] pt-2">Servicios</span>
         </div>
+        <div class="flex flex-col items-center text-center">
+          <Mantenimiento class="size-10 text-white" />
+          <span class="text-lg sm:text-xl font-bold text-[#a7a9be] pt-2">Mantenimiento</span>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <Obras class="size-10 text-[#002C5F]" />
+          <span class="text-lg sm:text-xl font-bold text-[#a7a9be] pt-2">Obras</span>
+        </div>
+      </div>
     </div>
 
-    <div class="mt-20 flex">
-        <a href="#services" class="bg-[#ff8906] text-xl font-bold text-[#fffffe] px-17 py-4 rounded-full hover:bg-[#B56104] transition w-fit">
-            Nuestros Servicios
-        </a>
+    <!-- Botón -->
+    <div class="mt-10 sm:mt-14">
+      <a href="#services" class="bg-[#ff8906] text-base sm:text-lg md:text-xl font-bold text-white px-8 py-3 rounded-full hover:bg-[#B56104] transition">
+        Nuestros Servicios
+      </a>
     </div>
-
-</div>
+  </div>
 
   <!-- Columna derecha: Imagen -->
-  <div class="flex-1 min-h-[calc(100vh-265px)] w-full bg-[url('/images/hero.webp')] bg-cover bg-center rounded-none md:rounded-xl shadow-none md:shadow-lg">
+  <div class="flex-1 w-full min-h-[300px] sm:min-h-[400px] md:min-h-[calc(100vh-265px)] bg-[url('/images/hero.webp')] bg-cover bg-center rounded-md md:rounded-xl shadow-md md:shadow-lg">
   </div>
 
 </section>

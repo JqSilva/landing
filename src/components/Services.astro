@@ -1,79 +1,110 @@
 ---
-import Flecha from '../assets/svg/flecha.svg';
+import Flecha from "../assets/svg/flecha.svg";
 ---
 
 <section
   id="services"
-  class="min-h-screen flex items-center justify-center bg-[linear-gradient(#ECEFFE,#CED6FB)]"
+  class="scroll-mt-15 min-h-screen flex flex-col items-center justify-center bg-[linear-gradient(#ECEFFE,#CED6FB)] px-4 gap-5"
 >
+  <!-- TÍTULO -->
+  <div class="w-full max-w-6xl mb-10 text-center px-4">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Nuestros Servicios</h2>
+  </div>
 
-  
   <!-- CARDS DE SERVICIOS -->
-  <div class="container swiper">
-    <div class="card-wrapper flex items-center justify-center min-h-screen">
+  <div class="swiper w-full">
+    <div class="card-wrapper w-full max-w-6xl mx-auto mb-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <ul class="card-list swiper-wrapper">
-        <li class="card-item swiper-slide">
-            <a href="#" class="group block w-[400px] bg-white p-[18px] rounded-[12px] no-underline border-[2px] border-transparent hover:border-[#5372F0] transition-all duration-300 ease-in-out">
-              <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]">
-              <h3 class="my-5 text-lg  md:text-xl font-bold">Servicio 1</h3>
-              <p class="text-lg md:text-xl text-[#a7a9be]">Descripción del servicio 1.</p>
-              <button><Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" /></button>
-            </a>    
+        <!-- Tarjetas de servicios -->
+        
+        <li class="card-item swiper-slide list-none">
+          <a href="#" class="card-link group block select-none bg-white p-5 rounded-[12px] no-underline border-2 border-transparent shadow-md hover:border-[#5372F0] transition-all duration-200 ease-in-out">
+            <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]" />
+            <h3 class="my-5 text-lg md:text-xl font-bold">Servicio 1</h3>
+            <p class="text-lg md:text-xl text-[#a7a9be]">Lorem ipsum dolor sit amet consectetur.</p>
+            <button>
+              <Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" />
+            </button>
+          </a>
         </li>
-        <li class="card-item swiper-slide">
-            <a href="#" class="group block w-[400px] bg-white p-[18px] rounded-[12px] no-underline border-[2px] border-transparent hover:border-[#5372F0] transition-all duration-300 ease-in-out">
-              <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]">
-              <h3 class="my-5 text-lg  md:text-xl font-bold">Servicio 2</h3>
-              <p class="text-lg md:text-xl text-[#a7a9be]">Descripción del servicio 2.</p>
-              <button><Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" /></button>
-            </a>    
+
+        <!-- Resto de tarjetas iguales... -->
+        <li class="card-item swiper-slide list-none">
+          <a href="#" class="card-link group block select-none bg-white p-5 rounded-[12px] no-underline border-2 border-transparent shadow-md hover:border-[#5372F0] transition-all duration-200 ease-in-out">
+            <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]" />
+            <h3 class="my-5 text-lg md:text-xl font-bold">Servicio 1</h3>
+            <p class="text-lg md:text-xl text-[#a7a9be]">Lorem ipsum dolor sit amet consectetur.</p>
+            <button>
+              <Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" />
+            </button>
+          </a>
         </li>
-        <li class="card-item swiper-slide">
-            <a href="#" class="group block w-[400px] bg-white p-[18px] rounded-[12px] no-underline border-[2px] border-transparent hover:border-[#5372F0] transition-all duration-300 ease-in-out">
-              <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]">
-              <h3 class="my-5 text-lg  md:text-xl font-bold">Servicio 3</h3>
-              <p class="text-lg md:text-xl text-[#a7a9be]">Descripción del servicio 3.</p>
-              <button><Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" /></button>
-            </a>    
+        <li class="card-item swiper-slide list-none">
+          <a href="#" class="card-link group block select-none bg-white p-5 rounded-[12px] no-underline border-2 border-transparent shadow-md hover:border-[#5372F0] transition-all duration-200 ease-in-out">
+            <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]" />
+            <h3 class="my-5 text-lg md:text-xl font-bold">Servicio 1</h3>
+            <p class="text-lg md:text-xl text-[#a7a9be]">Lorem ipsum dolor sit amet consectetur.</p>
+            <button>
+              <Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" />
+            </button>
+          </a>
         </li>
-        <li class="card-item swiper-slide">
-            <a href="#" class="group block w-[400px] bg-white p-[18px] rounded-[12px] no-underline border-[2px] border-transparent hover:border-[#5372F0] transition-all duration-300 ease-in-out">
-              <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]">
-              <h3 class="my-5 text-lg  md:text-xl font-bold">Servicio 4</h3>
-              <p class="text-lg md:text-xl text-[#a7a9be]">Descripción del servicio 4.</p>
-              <button><Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" /></button>
-            </a>    
+        <li class="card-item swiper-slide list-none">
+          <a href="#" class="card-link group block select-none bg-white p-5 rounded-[12px] no-underline border-2 border-transparent shadow-md hover:border-[#5372F0] transition-all duration-200 ease-in-out">
+            <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]" />
+            <h3 class="my-5 text-lg md:text-xl font-bold">Servicio 1</h3>
+            <p class="text-lg md:text-xl text-[#a7a9be]">Lorem ipsum dolor sit amet consectetur.</p>
+            <button>
+              <Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" />
+            </button>
+          </a>
         </li>
-        <li class="card-item swiper-slide">
-            <a href="#" class="group block w-[400px] bg-white p-[18px] rounded-[12px] no-underline border-[2px] border-transparent hover:border-[#5372F0] transition-all duration-300 ease-in-out">
-              <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]">
-              <h3 class="my-5 text-lg  md:text-xl font-bold">Servicio 5</h3>
-              <p class="text-lg md:text-xl text-[#a7a9be]">Descripción del servicio 5.</p>
-              <button><Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" /></button>
-            </a>    
+        <li class="card-item swiper-slide list-none">
+          <a href="#" class="card-link group block select-none bg-white p-5 rounded-[12px] no-underline border-2 border-transparent shadow-md hover:border-[#5372F0] transition-all duration-200 ease-in-out">
+            <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]" />
+            <h3 class="my-5 text-lg md:text-xl font-bold">Servicio 1</h3>
+            <p class="text-lg md:text-xl text-[#a7a9be]">Lorem ipsum dolor sit amet consectetur.</p>
+            <button>
+              <Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" />
+            </button>
+          </a>
         </li>
       </ul>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev" onclick="console.log('Prev clicked')"></div>
-      <div class="swiper-button-next" onclick="console.log('Next clicked')"></div>
+
+      <!-- Swiper Controls -->
+      <div class="swiper-pagination mt-6"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
   </div>
 
+  <!-- Swiper JS & CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script is:inline>
-    new Swiper('.card-wrapper',{
+    new Swiper(".card-wrapper", {
       loop: true,
-
+      spaceBetween: 30,
       pagination: {
-        el: '.swiper-pagination',
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
       },
-
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
       },
     });
-    
   </script>
 </section>

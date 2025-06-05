@@ -1,16 +1,57 @@
-<header class="fixed top-0 w-full text-[#fffffe] mx-auto bg-[#0f0e17] z-50">
-    <nav class="flex items-center px-6 py-7 text-sm font-bold justify-between max-w-6xl mx-auto">
-        <div class="hidden md:flex flex-row gap-8 justify-start">
-            <img src="/images/logo.webp" alt="Mar-otec" class="w-15 h-15 inline-block" />
-            <a href="/" class="inline-block my-auto text-base" >Inicio</a>
-            <a href="#services" class="inline-block my-auto text-base" >Servicios</a>
-            <a href="/" class="inline-block my-auto text-base" >Clientes</a>
-             <a href="/" class="inline-block my-auto text-base" >Sobre Nosotros</a>
-            <a href="/" class="inline-block my-auto text-base" >Contacto</a>
-        </div>
-        <div class="hidden md:flex flex-row justify-end gap-8">
-            <a role="button" href="/" class="bg-[#ff8906] text-base font-bold text-[#fffffe] px-5 py-2 rounded hover:bg-[#B56104] transition w-fit">Inscribete</a>
-        </div>
-    </nav>
+<header class="fixed top-0 w-full z-50 bg-transparent md:bg-[#0f0e17] text-[#fffffe]">
+  <nav class="flex items-center px-6 py-7 text-sm font-bold justify-between max-w-6xl mx-auto">
+    <!-- Logo + Título (solo visible en md para arriba) -->
+    <div class="flex items-center gap-3">
+      <img src="/images/logo.webp" alt="Mar-otec" class="w-14 h-14 inline-block" />
+      <span class="hidden md:inline text-xl">Mar-Otec</span>
+    </div>
 
+    <!-- Menú normal (visible en desktop) -->
+    <div class="hidden md:flex flex-row gap-8 justify-start">
+      <a href="/" class="inline-block my-auto text-base">Inicio</a>
+      <a href="#services" class="inline-block my-auto text-base">Servicios</a>
+      <a href="#clientes" class="inline-block my-auto text-base">Clientes</a>
+      <a href="#nosotros" class="inline-block my-auto text-base">Sobre Nosotros</a>
+      <a href="#contacto" class="inline-block my-auto text-base">Contacto</a>
+    </div>
+
+    <!-- Botón inscribirse (solo en desktop) -->
+    <div class="hidden md:flex flex-row justify-end gap-8">
+      <a role="button" href="/" class="bg-[#ff8906] text-base font-bold text-[#fffffe] px-5 py-2 rounded hover:bg-[#B56104] transition w-fit">
+        Inscríbete
+      </a>
+    </div>
+
+    <!-- Botón hamburguesa (solo en móvil) -->
+    <button id="menu-toggle" class="md:hidden text-white z-50">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Menú lateral móvil -->
+  <div id="mobile-menu" class="fixed top-0 right-[-100%] w-3/4 max-w-xs h-screen bg-[#0f0e17] text-[#fffffe] flex flex-col gap-6 items-start p-8 pt-28 transition-all duration-500 ease-in-out md:hidden z-40">
+    <a href="/" class="w-full text-lg">Inicio</a>
+    <a href="#services" class="w-full text-lg">Servicios</a>
+    <a href="#clientes" class="w-full text-lg">Clientes</a>
+    <a href="#nosotros" class="w-full text-lg">Sobre Nosotros</a>
+    <a href="#contacto" class="w-full text-lg">Contacto</a>
+    <a href="/" class="bg-[#ff8906] w-full text-center rounded px-4 py-2 text-lg font-bold hover:bg-[#B56104] transition">
+      Inscríbete
+    </a>
+  </div>
+
+  <script is:inline>
+    const toggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    toggle.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.contains("right-0");
+      mobileMenu.classList.toggle("right-0", !isOpen);
+      mobileMenu.classList.toggle("right-[-100%]", isOpen);
+    });
+  </script>
 </header>
+
