@@ -27,3 +27,4 @@
 .hero-image {
   @apply flex-1 w-full min-h-[300px] sm:min-h-[400px] md:min-h-[calc(100vh-265px)] bg-[url('/images/hero.webp')] bg-cover bg-center rounded-md md:rounded-xl shadow-md md:shadow-lg;
 }
+

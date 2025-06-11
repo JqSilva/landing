@@ -1,110 +1,226 @@
----
-import Flecha from "../assets/svg/flecha.svg";
----
+<section class="py-24 bg-white">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <h2 class="font-extrabold text-3xl min-[400px]:text-4xl text-black mb-8 max-lg:text-center">Cursos</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-<section
-  id="services"
-  class="scroll-mt-15 min-h-screen flex flex-col items-center justify-center bg-[#E5E9F7] px-4 gap-5"
->
-  <!-- TÍTULO -->
-  <div class="w-full max-w-6xl mb-10 text-center px-4">
-    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-exbold mb-4">Nuestros Servicios</h2>
-  </div>
+      <!-- Tarjeta 1 -->
+      <div class="service-card">
+        <div class="relative w-full max-w-[384px] aspect-square bg-white rounded-xl shadow-lg transform-style-preserve-3d transition-all duration-300" id="card1">
+          <!-- Parte Frontal -->
+          <div class="card-front absolute w-full h-full backface-hidden">
+            <img src="https://pagedone.io/asset/uploads/1701157806.png" alt="cream image" class="w-full h-full object-cover rounded-xl transition-all duration-300" />
+            <div class="absolute inset-0 flex flex-col justify-center items-center p-6" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);">
+              <!-- Título del curso -->
+              <h6 class="font-semibold text-2xl text-white mb-4 text-center">Instalaciones Energizadas</h6>
+              <button id="btn1" class="bg-[#5372F0] text-white py-3 px-6 rounded-lg opacity-100 cursor-pointer hover:bg-[#0A256E] transition-all">
+                Más Información
+              </button>
+            </div>
+          </div>
+          <!-- Parte Trasera -->
+          <div class="card-back absolute w-full h-full bg-[#F4F7FC] text-black flex justify-center items-center backface-hidden transform rotate-y-180">
+            <div class="text-left p-6">
+              <div class="mb-4">
+                <p class="font-semibold text-lg">Curso:</p>
+                <p class="text-lg">Instalaciones Energizadas</p>
+              </div>
+              <div class="mb-4">
+                <p class="font-semibold text-lg">Descripción:</p>
+                <p class="text-lg">Curso especializado en trabajar en instalaciones energizadas, promoviendo la seguridad en el lugar de trabajo.</p>
+              </div>
+              <div class="mb-4">
+                <p class="font-semibold text-lg">Duración:</p>
+                <p class="text-lg">40 horas</p>
+              </div>
+              <button id="btn-back1" class="bg-[#5372F0] text-white py-3 px-6 rounded-lg opacity-100 mt-4 cursor-pointer hover:bg-[#0A256E] transition-all">
+                Volver
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <!-- CARDS DE SERVICIOS -->
-  <div class="swiper w-full">
-    <div class="card-wrapper w-full max-w-6xl mx-auto mb-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <ul class="card-list swiper-wrapper">
-        <!-- Tarjetas de servicios -->
-        
-        <li class="card-item swiper-slide list-none">
-          <a href="#" class="card-link group block select-none bg-white p-5 rounded-[12px] no-underline border-2 border-transparent shadow-[0_4px_20px_rgba(83,114,240,0.1)] hover:border-[#5372F0] transition-all duration-200 ease-in-out">
-            <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]" />
-            <h3 class="my-5 text-lg md:text-xl font-bold">Servicio 1</h3>
-            <p class="text-lg md:text-xl text-[#a7a9be]">Lorem ipsum dolor sit amet consectetur.</p>
-            <button>
-              <Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" />
-            </button>
-          </a>
-        </li>
+      <!-- Tarjeta 2 -->
+      <div class="service-card">
+        <div class="relative w-full max-w-[384px] aspect-square bg-white rounded-xl shadow-lg transform-style-preserve-3d transition-all duration-300" id="card2">
+          <!-- Parte Frontal -->
+          <div class="card-front absolute w-full h-full backface-hidden">
+            <img src="https://pagedone.io/asset/uploads/1701157806.png" alt="cream image" class="w-full h-full object-cover rounded-xl transition-all duration-300" />
+            <div class="absolute inset-0 flex flex-col justify-center items-center p-6" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);">
+              <!-- Título del curso -->
+              <h6 class="font-semibold text-2xl text-white mb-4 text-center">Desarrollo Front-end</h6>
+              <button id="btn2" class="bg-[#5372F0] text-white py-3 px-6 rounded-lg opacity-100 transition-all cursor-pointer hover:bg-[#0A256E]">
+                Más Información
+              </button>
+            </div>
+          </div>
+          <!-- Parte Trasera -->
+          <div class="card-back absolute w-full h-full bg-[#F4F7FC] text-black flex justify-center items-center backface-hidden transform rotate-y-180">
+            <div class="text-left p-6">
+              <div class="mb-4">
+                <p class="font-semibold text-lg">Curso:</p>
+                <p class="text-lg">Desarrollo Front-end</p>
+              </div>
+              <div class="mb-4">
+                <p class="font-semibold text-lg">Descripción:</p>
+                <p class="text-lg">Curso enfocado en las mejores prácticas para el desarrollo web en el lado del cliente (Front-end).</p>
+              </div>
+              <div class="mb-4">
+                <p class="font-semibold text-lg">Duración:</p>
+                <p class="text-lg">30 horas</p>
+              </div>
+              <button id="btn-back2" class="bg-[#5372F0] text-white py-3 px-6 rounded-lg opacity-100 mt-4 cursor-pointer hover:bg-[#0A256E] transition-all">
+                Volver
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <!-- Resto de tarjetas iguales... -->
-        <li class="card-item swiper-slide list-none">
-          <a href="#" class="card-link group block select-none bg-white p-5 rounded-[12px] no-underline border-2 border-transparent shadow-[0_4px_20px_rgba(83,114,240,0.1)] hover:border-[#5372F0] transition-all duration-200 ease-in-out">
-            <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]" />
-            <h3 class="my-5 text-lg md:text-xl font-bold">Servicio 1</h3>
-            <p class="text-lg md:text-xl text-[#a7a9be]">Lorem ipsum dolor sit amet consectetur.</p>
-            <button>
-              <Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" />
-            </button>
-          </a>
-        </li>
-        <li class="card-item swiper-slide list-none">
-          <a href="#" class="card-link group block select-none bg-white p-5 rounded-[12px] no-underline border-2 border-transparent shadow-[0_4px_20px_rgba(83,114,240,0.1)] hover:border-[#5372F0] transition-all duration-200 ease-in-out">
-            <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]" />
-            <h3 class="my-5 text-lg md:text-xl font-bold">Servicio 1</h3>
-            <p class="text-lg md:text-xl text-[#a7a9be]">Lorem ipsum dolor sit amet consectetur.</p>
-            <button>
-              <Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" />
-            </button>
-          </a>
-        </li>
-        <li class="card-item swiper-slide list-none">
-          <a href="#" class="card-link group block select-none bg-white p-5 rounded-[12px] no-underline border-2 border-transparent shadow-[0_4px_20px_rgba(83,114,240,0.1)] hover:border-[#5372F0] transition-all duration-200 ease-in-out">
-            <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]" />
-            <h3 class="my-5 text-lg md:text-xl font-bold">Servicio 1</h3>
-            <p class="text-lg md:text-xl text-[#a7a9be]">Lorem ipsum dolor sit amet consectetur.</p>
-            <button>
-              <Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" />
-            </button>
-          </a>
-        </li>
-        <li class="card-item swiper-slide list-none">
-          <a href="#" class="card-link group block select-none bg-white p-5 rounded-[12px] no-underline border-2 border-transparent shadow-[0_4px_20px_rgba(83,114,240,0.1)] hover:border-[#5372F0] transition-all duration-200 ease-in-out">
-            <img src="/images/hero.webp" alt="card image" class="w-full aspect-[16/9] object-cover rounded-[10px]" />
-            <h3 class="my-5 text-lg md:text-xl font-bold">Servicio 1</h3>
-            <p class="text-lg md:text-xl text-[#a7a9be]">Lorem ipsum dolor sit amet consectetur.</p>
-            <button>
-              <Flecha class="h-[35px] w-[35px] mt-[30px] mb-[5px] rounded-full text-[#5372F0] cursor-pointer border border-[#5372F0] transform rotate-[-45deg] group-hover:bg-[#5372F0] group-hover:text-white transition-colors" />
-            </button>
-          </a>
-        </li>
-      </ul>
-
-      <!-- Swiper Controls -->
-      <div class="swiper-pagination mt-6"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <!-- Tarjeta 3 -->
+      <div class="service-card">
+        <div class="relative w-full max-w-[384px] aspect-square bg-white rounded-xl shadow-lg transform-style-preserve-3d transition-all duration-300" id="card3">
+          <!-- Parte Frontal -->
+          <div class="card-front absolute w-full h-full backface-hidden">
+            <img src="https://pagedone.io/asset/uploads/1701157806.png" alt="cream image" class="w-full h-full object-cover rounded-xl transition-all duration-300" />
+            <div class="absolute inset-0 flex flex-col justify-center items-center p-6" style="text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);">
+              <!-- Título del curso -->
+              <h6 class="font-semibold text-2xl text-white mb-4 text-center">Desarrollo Front-end</h6>
+              <button id="btn3" class="bg-[#5372F0] text-white py-3 px-6 rounded-lg opacity-100 transition-all cursor-pointer hover:bg-[#0A256E]">
+                Más Información
+              </button>
+            </div>
+          </div>
+          <!-- Parte Trasera -->
+          <div class="card-back absolute w-full h-full bg-[#F4F7FC] text-black flex justify-center items-center backface-hidden transform rotate-y-180">
+            <div class="text-left p-6">
+              <div class="mb-4">
+                <p class="font-semibold text-lg">Curso:</p>
+                <p class="text-lg">Desarrollo Front-end</p>
+              </div>
+              <div class="mb-4">
+                <p class="font-semibold text-lg">Descripción:</p>
+                <p class="text-lg">Curso enfocado en las mejores prácticas para el desarrollo web en el lado del cliente (Front-end).</p>
+              </div>
+              <div class="mb-4">
+                <p class="font-semibold text-lg">Duración:</p>
+                <p class="text-lg">30 horas</p>
+              </div>
+              <button id="btn-back3" class="bg-[#5372F0] text-white py-3 px-6 rounded-lg opacity-100 mt-4 cursor-pointer hover:bg-[#0A256E] transition-all">
+                Volver
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-  <!-- Swiper JS & CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script is:inline>
-    new Swiper(".card-wrapper", {
-      loop: true,
-      spaceBetween: 30,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        dynamicBullets: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-      },
-    });
-  </script>
 </section>
+
+<style>
+  .service-card {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #card1, #card2, #card3 {
+    width: 100%;
+    height: 100%;
+    max-width: 384px;
+    aspect-ratio: 1;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+
+  .card-front, .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta la parte trasera cuando está rotada */
+    border-radius: 12px;
+  }
+
+  .card-back {
+    background-color: #F4F7FC;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+  }
+
+  /* Efecto al pasar el cursor sobre la imagen */
+  .card-front img {
+    transition: transform 0.5s ease;
+  }
+
+  /* Aumenta el tamaño de la imagen al pasar el cursor */
+  .card:hover .card-front img {
+    transform: scale(1.1);
+  }
+
+  /* Cuando se hace click, se rota la tarjeta */
+  #card1.rotated, #card2.rotated, #card3.rotated {
+    transform: rotateY(180deg);
+  }
+
+  /* Botón de más información */
+  .more-info-btn {
+    background-color: #5372F0;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .more-info-btn:hover {
+    background-color: #0A256E;
+  }
+</style>
+
+<script>
+  // Seleccionamos los elementos
+  const card1 = document.getElementById("card1");
+  const card2 = document.getElementById("card2");
+  const card3 = document.getElementById("card3");
+  const btn1 = document.getElementById("btn1");
+  const btn2 = document.getElementById("btn2");
+  const btn3 = document.getElementById("btn3");
+  const btnBack1 = document.getElementById("btn-back1");
+  const btnBack2 = document.getElementById("btn-back2");
+  const btnBack3 = document.getElementById("btn-back3");
+
+  // Añadimos un evento de click al botón frontal
+  btn1.addEventListener("click", () => {
+    card1.classList.toggle("rotated"); // Rota la tarjeta al hacer clic
+  });
+
+  btn2.addEventListener("click", () => {
+    card2.classList.toggle("rotated"); // Rota la tarjeta al hacer clic
+  });
+  
+  btn3.addEventListener("click", () => {
+    card3.classList.toggle("rotated"); // Rota la tarjeta al hacer clic
+    console.log("Tarjeta 3 clickeada");
+  });
+  
+  // Añadimos un evento de click al botón de la parte trasera
+  btnBack1.addEventListener("click", () => {
+    card1.classList.toggle("rotated"); // Rota de vuelta al estado original
+  });
+
+  btnBack2.addEventListener("click", () => {
+    card2.classList.toggle("rotated"); // Rota de vuelta al estado original
+  });
+
+  btnBack3.addEventListener("click", () => {
+    card3.classList.toggle("rotated"); // Rota de vuelta al estado original
+  });
+</script>
