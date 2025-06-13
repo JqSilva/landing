@@ -6,151 +6,90 @@ import Instagram from "../assets/svg/instagram.svg";
 import MapPin from "../assets/svg/location.svg";
 import Phone from "../assets/svg/phone.svg";
 ---
-
-<header>
-  <!-- Header top (verde-azul) -->
-  <div class="header-top w-full bg-[#101828] text-white pt-[18px] pb-[55px] transition-all duration-200">
-    <div
-      class="max-w-6xl mx-auto w-full flex items-center justify-between px-4"
-    >
-      <!-- Left side -->
+<header id="hero">
+  <!-- HEADER ESCRITORIO (oculto en móvil) -->
+  <div class="header-top w-full bg-[#101828] text-white pt-[18px] pb-[55px] transition-all duration-200 hidden md:block">
+    <div class="max-w-6xl mx-auto w-full flex items-center justify-between px-4">
       <div class="flex items-center justify-start">
         <span>Certificaciones Electricas</span>
       </div>
-      <!-- derecha -->
       <div class="flex items-center gap-25">
-        <!-- direccion -->
         <div class="flex items-center gap-2">
           <a href="#" class="flex items-center gap-1 text-white size-6">
             <MapPin />
           </a>
           <span class="flex items-center text-white">Direccion</span>
         </div>
-        <!-- telefono -->
         <div class="flex items-center gap-2">
           <a href="#" class="flex items-center gap-1 text-white size-6">
             <Phone />
           </a>
           <span class="flex items-center gap-1 text-white">+569 1234 5678</span>
         </div>
-        <!-- redes -->
         <div class="flex gap-4">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            class="size-7 hover:scale-125 transition"
-          >
-            <Facebook />
-          </a>
-          <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            class="size-7 hover:scale-125 transition"
-          >
-            <LinkedIn />
-          </a>
-          <a
-            href="https://www.youtube.com"
-            target="_blank"
-            class="size-7 hover:scale-125 transition"
-          >
-            <YouTube />
-          </a>
-          <a
-            href="https://www.instagram.com/joaquiiv/"
-            target="_blank"
-            class="size-7 hover:scale-125 transition"
-          >
-            <Instagram />
-          </a>
+          <a href="https://facebook.com" target="_blank" class="size-7 hover:scale-125 transition"><Facebook /></a>
+          <a href="https://www.linkedin.com" target="_blank" class="size-7 hover:scale-125 transition"><LinkedIn /></a>
+          <a href="https://www.youtube.com" target="_blank" class="size-7 hover:scale-125 transition"><YouTube /></a>
+          <a href="https://www.instagram.com/joaquiiv/" target="_blank" class="size-7 hover:scale-125 transition"><Instagram /></a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Header bottom (barra roja sticky, centrada y con logo) -->
-  <div
-    class="header-bottom fixed z-20 left-1/2 transform -translate-x-1/2 top-[60px] w-full max-w-[1200px] text-[16px] leading-[1.6] box-border transition-all duration-200"
-  >
+  <div class="header-bottom fixed z-20 left-1/2 transform -translate-x-1/2 top-[60px] w-full max-w-[1200px] text-[16px] leading-[1.6] box-border transition-all duration-200 hidden md:block">
     <div class="container w-full justify-center mx-auto md:max-w-[1120px]">
-      <div
-        class="header-bottom-row flex items-center justify-between bg-[#E5E9F7] text-black shadow-sm "
-      >
-        <div
-          class="header-logo flex items-center justify-center gap-5 pt-[15px] pr-[60px] pb-[15px] pl-[40px] bg-white [clip-path:polygon(0px_0px,100%_0%,82.68%_101.20%,0px_100%)]"
-        >
+      <div class="header-bottom-row flex items-center justify-between bg-[#E5E9F7] text-black shadow-sm">
+        <div class="header-logo flex items-center justify-center gap-5 pt-[15px] pr-[60px] pb-[15px] pl-[40px] bg-white [clip-path:polygon(0px_0px,100%_0%,82.68%_101.20%,0px_100%)]">
           <a href="#hero">
             <img src="/images/logo.webp" alt="Capacitacion" class="h-12" />
           </a>
           <span class="text-[#18343b] text-lg font-bold">Mar-Otec</span>
-
         </div>
         <nav class="header-nav block">
-          <ul class="flex items-center justify-between gap-10 px-15 text-lg font-medium text-black">
-            <li>
-              <a
-                class="hover:text-[#5372F0] transition"
-                href="#hero">Inicio</a
-              >
-            </li>
-            <li>
-              <a
-                class="hover:text-[#5372F0] transition"
-                href="#services">Servicios</a
-              >
-            </li>
-            <li>
-              <a
-                class="hover:text-[#5372F0] transition"
-                href="#about">Sobre Nosotros</a
-              >
-            </li>
-            <li>
-              <a
-                class="hover:text-[#5372F0] transition"
-                href="#team">Equipo</a
-              >
-            </li>
-            <li>
-              <a
-                class="hover:text-[#5372F0] transition"
-                href="#contact">Contacto</a
-              >
-            </li>
+          <ul class="flex items-center justify-between gap-10 px-12 text-lg font-medium text-black">
+            <li><a class="hover:text-[#5372F0] transition" href="#hero">Inicio</a></li>
+            <li><a class="hover:text-[#5372F0] transition" href="#services">Servicios</a></li>
+            <li><a class="hover:text-[#5372F0] transition" href="#about">Sobre Nosotros</a></li>
+            <li><a class="hover:text-[#5372F0] transition" href="#team">Equipo</a></li>
+            <li><a class="hover:text-[#5372F0] transition" href="#contact">Contacto</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </div>
+
+  <!-- HEADER MÓVIL (oculto en pantallas medianas+) -->
+  <div class="md:hidden fixed top-0 left-0 w-full bg-[#101828] text-white px-4 py-3 flex items-center justify-between z-50">
+    <a href="#hero" class="flex items-center gap-2">
+      <img src="/images/logo.webp" alt="Logo" class="h-10" />
+      <span class="font-bold text-lg">Mar-Otec</span>
+    </a>
+    <button id="menu-toggle" class="text-white focus:outline-none z-50">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- MENÚ HAMBURGUESA (móvil) -->
+  <nav id="mobile-nav" class="hidden fixed top-[64px] left-0 w-full bg-[#101828] text-white px-4 py-4 space-y-3 text-center z-40">
+    <a href="#hero" class="block hover:text-[#5372F0] transition">Inicio</a>
+    <a href="#services" class="block hover:text-[#5372F0] transition">Servicios</a>
+    <a href="#about" class="block hover:text-[#5372F0] transition">Sobre Nosotros</a>
+    <a href="#team" class="block hover:text-[#5372F0] transition">Equipo</a>
+    <a href="#contact" class="block hover:text-[#5372F0] transition">Contacto</a>
+  </nav>
 </header>
 
-<script>
-  let lastScroll = 0;
-  const headerTop = document.querySelector('.header-top');
-  const headerBottom = document.querySelector('.header-bottom');
+<script is:inline>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
 
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-
-    // Si hacemos scroll hacia abajo y pasamos los 100px
-    if (currentScroll > 50) {
-      headerTop.style.transform = 'translateY(-100%)';
-      headerBottom.style.top = '0';
-      headerBottom.style.position = 'fixed';
-    } else {
-      // Volvemos a la posición original
-      headerTop.style.transform = 'translateY(0)';
-      headerBottom.style.top = '60px';
-    }
-
-    lastScroll = currentScroll;
+  toggleBtn?.addEventListener("click", () => {
+    mobileNav.classList.toggle("hidden");
   });
+
+  document.querySelectorAll("#mobile-nav a").forEach(link =>
+    link.addEventListener("click", () => mobileNav.classList.add("hidden"))
+  );
 </script>
-
-<style>
-  .header-top {
-    position: relative;
-    z-index: 10;
-  }
-</style>
-

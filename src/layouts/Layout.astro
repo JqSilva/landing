@@ -6,61 +6,54 @@ import Footer from "../components/Footer.astro";
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Mar-Otec</title>
+  <head>
+    <meta charset="UTF-8" />
+    
+    <title>Mar-Otec</title>
 
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-		<meta name= "description" content="Empresa que realiza capacitaciones y certificaciones en instalaciones energizadas."/>
-		
-		<meta property="og:url" content="https://mar-otec.cl/"/>
-		<meta property="og:type" content = "website" />
-		<meta property="og:title" content = "Mar Otec Capacitaciones" />
-		<meta property="og:description" content = "Empresa que realiza capacitaciones y certificaciones en instalaciones energizadas." />
-		<meta property="og:image" content = ""/>
-		<meta property="og:locale" content = "es_ES"/>
 
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:site" content="@mar_otec" />
-		<meta name="twitter:title" content="Mar Otec Capacitaciones" />
-		<meta name="twitter:description" content="Empresa que realiza capacitaciones y certificaciones en instalaciones energizadas." />
-		<meta name="twitter:creator" content="@joaquiv" />
-	</head>
-	<body>
-		<section id="hero">
-			<Header/>
-		</section>
-		<main>
-			<slot />
-		</main>
-		<Footer />
-	</body>
-	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Empresa que realiza capacitaciones y certificaciones en instalaciones energizadas." />
+
+    <meta property="og:url" content="https://mar-otec.cl/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mar Otec Capacitaciones" />
+    <meta property="og:description" content="Empresa que realiza capacitaciones y certificaciones en instalaciones energizadas." />
+    <meta property="og:image" content="" />
+    <meta property="og:locale" content="es_ES" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@mar_otec" />
+    <meta name="twitter:title" content="Mar Otec Capacitaciones" />
+    <meta name="twitter:description" content="Empresa que realiza capacitaciones y certificaciones en instalaciones energizadas." />
+    <meta name="twitter:creator" content="@joaquiv" />
+    
+
+  </head>
+
+  <body class="flex flex-col min-h-screen overflow-x-hidden bg-[#101828]">
+
+    <Header />
+
+    <main>
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
 </html>
 
-<style>
-	html {
-		margin: 0;
-		padding: 0;
-		width: 100%;
-		height: 100%;
-		scroll-behavior: smooth;
-	}
 
-	body {
-		margin: 0;
-		padding: 0;
-		width: 100%;
-		min-height: 100dvh;
-		background: #101828;
-		display: flex;
-		flex-direction: column;
-	}
-
-	main {
-		flex: 1;
-		width: 100%;
-	}
-</style>
+<!-- Corrección de estilos de ancho global -->
+    <style>
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        scroll-behavior: smooth;
+      }
+      
+    </style>
