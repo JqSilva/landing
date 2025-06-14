@@ -13,7 +13,6 @@ import Footer from "../components/Footer.astro";
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Empresa que realiza capacitaciones y certificaciones en instalaciones energizadas." />
 
@@ -42,6 +41,7 @@ import Footer from "../components/Footer.astro";
     </main>
 
     <Footer />
+
   </body>
 </html>
 
@@ -62,7 +62,6 @@ import Footer from "../components/Footer.astro";
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-
     document.body.addEventListener("click", (e) => {
       const btn = e.target.closest(".btn-curso, .btn-back");
       if (!btn) return;
@@ -78,5 +77,13 @@ import Footer from "../components/Footer.astro";
         card?.classList.remove("rotated");
       }
     });
+  });
+</script>
+
+<script type="module">
+  import { initScrollAnimations } from "/src/scripts/scrollAnimations.js";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    initScrollAnimations();
   });
 </script>
