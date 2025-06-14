@@ -57,3 +57,26 @@ import Footer from "../components/Footer.astro";
       }
       
     </style>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+    document.body.addEventListener("click", (e) => {
+      const btn = e.target.closest(".btn-curso, .btn-back");
+      if (!btn) return;
+
+      const id = btn.dataset.id;
+      const card = document.querySelector(`.curso-card[data-id="${id}"]`);
+
+      if (btn.classList.contains("btn-curso")) {
+        card?.classList.add("rotated");
+      }
+
+      if (btn.classList.contains("btn-back")) {
+        card?.classList.remove("rotated");
+      }
+    });
+  });
+</script>

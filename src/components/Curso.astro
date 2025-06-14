@@ -1,0 +1,30 @@
+---
+const { titulo, descripcion, modalidad, duracion, imagen, id } = Astro.props;
+---
+<div class="service-card">
+  <div class="curso-card bg-white rounded-xl shadow-lg min-h-[500px]" data-id={id}>
+    <div class="card-front absolute w-full h-full backface-hidden">
+      <img src={imagen} alt={titulo} class="w-full h-full object-cover rounded-xl" />
+      <div class="absolute inset-0 bg-black opacity-60 rounded-xl"></div>
+      <div class="absolute inset-0 flex flex-col justify-center items-center p-6 text-white text-center">
+        <h6 class="font-semibold text-2xl mb-4">{titulo}</h6>
+        <button class="btn-curso bg-[#5372F0] text-white py-3 px-6 rounded-lg hover:bg-[#0A256E] transition-all cursor-pointer" data-id={id}>
+          Más Información
+        </button>
+      </div>
+    </div>
+
+    <div class="card-back absolute w-full h-full backface-hidden transform rotate-y-180">
+      <div class="text-left p-6">
+        <div class="mb-4"><h6 class="font-semibold text-lg">Curso:</h6><p class="text-lg">{titulo}</p></div>
+        <div class="mb-4"><h6 class="font-semibold text-lg">Descripción:</h6><p class="text-lg">{descripcion}</p></div>
+        <div class="mb-4"><h6 class="font-semibold text-lg">Modalidad:</h6><p class="text-lg">{modalidad}</p></div>
+        <div class="mb-4"><h6 class="font-semibold text-lg">Duración:</h6><p class="text-lg">{duracion}</p></div>
+        <button class="btn-back bg-[#5372F0] text-white py-3 px-6 rounded-lg mt-4 hover:bg-[#0A256E] transition-all" data-id={id}>
+          Volver
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

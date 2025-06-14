@@ -72,7 +72,8 @@ import Phone from "../assets/svg/phone.svg";
   </div>
 
   <!-- MENÚ HAMBURGUESA (móvil) -->
-  <nav id="mobile-nav" class="hidden fixed top-[64px] left-0 w-full bg-[#101828] text-white px-4 py-4 space-y-3 text-center z-40">
+  <nav id="mobile-nav" class="fixed top-[64px] left-0 w-full bg-[#101828] text-white px-4 py-4 space-y-3 text-center z-40 opacity-0 scale-y-95 transform transition-all duration-300 ease-in-out pointer-events-none">
+
     <a href="#hero" class="block hover:text-[#5372F0] transition">Inicio</a>
     <a href="#services" class="block hover:text-[#5372F0] transition">Servicios</a>
     <a href="#about" class="block hover:text-[#5372F0] transition">Sobre Nosotros</a>
@@ -84,12 +85,47 @@ import Phone from "../assets/svg/phone.svg";
 <script is:inline>
   const toggleBtn = document.getElementById("menu-toggle");
   const mobileNav = document.getElementById("mobile-nav");
+  
 
-  toggleBtn?.addEventListener("click", () => {
-    mobileNav.classList.toggle("hidden");
+ toggleBtn?.addEventListener("click", () => {
+  const isOpen = !mobileNav.classList.contains("opacity-100");
+
+  if (isOpen) {
+    mobileNav.classList.remove("opacity-0", "scale-y-95", "pointer-events-none");
+    mobileNav.classList.add("opacity-100", "scale-y-100", "pointer-events-auto");
+  } else {
+    mobileNav.classList.remove("opacity-100", "scale-y-100", "pointer-events-auto");
+    mobileNav.classList.add("opacity-0", "scale-y-95", "pointer-events-none");
+  }
+});
+
+document.querySelectorAll("#mobile-nav a").forEach(link =>
+  link.addEventListener("click", () => {
+    mobileNav.classList.remove("opacity-100", "scale-y-100", "pointer-events-auto");
+    mobileNav.classList.add("opacity-0", "scale-y-95", "pointer-events-none");
+  })
+);
+</script>
+
+<script>
+  let lastScroll = 0;
+  const headerTop = document.querySelector('.header-top');
+  const headerBottom = document.querySelector('.header-bottom');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+
+    // Si hacemos scroll hacia abajo y pasamos los 100px
+    if (currentScroll > 50) {
+      headerTop.style.transform = 'translateY(-100%)';
+      headerBottom.style.top = '0';
+      headerBottom.style.position = 'fixed';
+    } else {
+      // Volvemos a la posición original
+      headerTop.style.transform = 'translateY(0)';
+      headerBottom.style.top = '60px';
+    }
+
+    lastScroll = currentScroll;
   });
-
-  document.querySelectorAll("#mobile-nav a").forEach(link =>
-    link.addEventListener("click", () => mobileNav.classList.add("hidden"))
-  );
 </script>
