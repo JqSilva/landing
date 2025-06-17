@@ -1,10 +1,11 @@
 ---
+import { Image } from 'astro:assets';
 const { titulo, descripcion, modalidad, duracion, imagen, id } = Astro.props;
 ---
 <div class="service-card">
   <div class="curso-card bg-white rounded-xl shadow-lg min-h-[500px]" data-id={id}>
     <div class="card-front absolute w-full h-full backface-hidden">
-      <img src={imagen} alt={titulo} class="w-full h-full object-cover rounded-xl" />
+      <Image src={imagen} alt={titulo} class="w-full h-full object-cover rounded-xl" format='webp' loading="lazy"/>
       <div class="absolute inset-0 bg-black opacity-60 rounded-xl"></div>
       <div class="absolute inset-0 flex flex-col justify-center items-center p-6 text-white text-center">
         <h6 class="font-semibold text-2xl mb-4">{titulo}</h6>

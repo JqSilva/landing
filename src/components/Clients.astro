@@ -1,3 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import saesa from '../assets/images/grupo-saesa.png';
+import transelec from '../assets/images/transelec.png';
+import cge from '../assets/images/cge.png';
+import engie from '../assets/images/engie.png';
+---
+
+
 <section class="pt-2 text-white body-font bg-[#101828] sm:bg-gradient-to-b sm:from-gray-800 sm:via-gray-800 sm:to-gray-900 min-h-[600px]">
   <div class="container px-5 py-10 mx-auto">
     <div class="flex flex-col text-center w-full mb-16">
@@ -16,7 +25,7 @@
       >
         <a href="https://web.gruposaesa.cl/" target="_blank" rel="noopener noreferrer">
         <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center justify-center hover:scale-102">
-          <img src="/images/grupo-saesa.png" alt="Grupo Saesa" class="w-24 h-24 object-contain mb-3" />
+          <Image src={saesa} alt="Grupo Saesa" class="w-24 h-24 object-contain mb-3" loading="lazy"/>
           <p class="text-gray-800 font-medium text-center">Grupo Saesa</p>
         </div>
         </a>
@@ -29,7 +38,7 @@
       >
         <a href="https://www.transelec.cl/" target="_blank" rel="noopener noreferrer">
           <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center justify-center hover:scale-102">
-            <img src="/images/transelec.png" alt="Transelec" class="w-24 h-24 object-contain mb-3" />
+            <Image src={transelec} alt="Transelec" class="w-24 h-24 object-contain mb-3" loading="lazy"/>
             <p class="text-gray-800 font-medium text-center">Transelec</p>
           </div>
         </a>
@@ -43,7 +52,7 @@
       >
         <a href="https://www.cge.cl/" target="_blank" rel="noopener noreferrer">
           <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center justify-center hover:scale-102">
-            <img src="/images/cge.png" alt="CGE" class="w-24 h-24 object-contain mb-3" />
+            <Image src={cge} alt="CGE" class="w-24 h-24 object-contain mb-3" loading="lazy"/>
             <p class="text-gray-800 font-medium text-center">CGE</p>
           </div>
         </a>
@@ -57,7 +66,7 @@
       >
         <a href="https://www.engie.cl/" target="_blank" rel="noopener noreferrer">
           <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center justify-center hover:scale-102">
-            <img src="/images/engie.png" alt="ENGIE" class="w-24 h-24 object-contain mb-3" />
+            <Image src={engie} alt="ENGIE" class="w-24 h-24 object-contain mb-3" loading="lazy"/>
             <p class="text-gray-800 font-medium text-center">ENGIE</p>
           </div>
         </a>

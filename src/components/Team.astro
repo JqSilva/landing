@@ -1,3 +1,8 @@
+---
+import { Image } from 'astro:assets';
+import imagen_juan from '../assets/images/juan.jpg';
+---
+
 <section id="team" class="scroll-mt-15 bg-white dark:bg-gray-900">
   <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
       <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
@@ -13,7 +18,11 @@
             data-delay="0"
             data-duration="0.6"
           >
-              <img class="rounded-lg sm:rounded-none sm:rounded-l-lg sm:w-[300px]" src="./images/juan.jpg" alt="Jese Avatar">
+              <Image
+                 src={imagen_juan}
+                 alt="Juan Carlos"
+                 class="rounded-lg sm:rounded-none sm:rounded-l-lg sm:w-[300px]"  
+                />
               <div class="p-5">
                   <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                       Juan Carlos Rodríguez
