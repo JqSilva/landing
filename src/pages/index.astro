@@ -18,3 +18,74 @@ import Prueba from '../components/Prueba.astro';
 	<Contact />
 </Layout>
 
+
+
+<script>
+  import { gsap } from "gsap"
+  import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+  gsap.registerPlugin(ScrollTrigger)
+
+console.log("Gsap VERSION:", gsap.version )
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.innerWidth < 768) {
+      console.log("Modo teléfono: animaciones desactivadas")
+      return
+    }
+
+    console.log("Modo escritorio: animaciones activadas")
+
+    const animations = [
+      {
+        selector: ".fade-in",
+        props: () => ({ opacity: 0, y: 30 })
+      },
+      {
+        selector: ".zoom-in",
+        props: () => ({ opacity: 0, scale: 0.95 })
+      },
+      {
+        selector: ".slide-left",
+        props: () => ({ opacity: 0, x: -50 })
+      },
+      {
+        selector: ".slide-right",
+        props: () => ({ opacity: 0, x: 50 })
+      },
+      {
+        selector: ".slide-up",
+        props: () => ({ opacity: 0, y: 50 })
+      },
+      {
+        selector: ".slide-down",
+        props: () => ({ opacity: 0, y: -50 })
+      },
+      {
+        selector: ".card-zoom",
+        props: () => ({ opacity: 0, scale: 0.98 })
+      }
+    ]
+
+    animations.forEach(({ selector, props }) => {
+      gsap.utils.toArray(selector).forEach((el) => {
+        const start = el.dataset.start || "top 80%"
+        const delay = parseFloat(el.dataset.delay) || 0
+        const duration = parseFloat(el.dataset.duration) || 1.5
+
+        gsap.from(el, {
+          ...props(el),
+          scrollTrigger: {
+            trigger: el,
+            start,
+            toggleActions: "play none none none",
+            once: true
+          },
+          delay,
+          duration,
+          ease: "power2.out"
+        })
+      })
+    })
+  })
+</script>
+
