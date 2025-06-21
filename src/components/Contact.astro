@@ -23,8 +23,8 @@
       </div>
 
       <div>
-        <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Telefono</label>
-        <input  type="text" id="phone" name="telefono" class="w-full p-3 text-sm rounded-lg border bg-gray-50 text-gray-900 dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="+569 12345678" required>
+        <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Teléfono</label>
+        <input  type="text" id="phone" name="teléfono" class="w-full p-3 text-sm rounded-lg border bg-gray-50 text-gray-900 dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="+569 12345678" required>
       </div>
 
       <div>
@@ -33,6 +33,9 @@
       </div>
       <button type="submit" class="py-3 px-5 text-sm font-medium text-white rounded-lg bg-[#5372F0] hover:bg-[#0A256E] focus:ring-4 focus:outline-none focus:ring-primary-300">Enviar Mensaje</button>
       <input type="hidden" name="redirect" value="http://localhost:4321/gracias">
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+      <div class="h-captcha" data-captcha="true"></div>
+
     </form>
   </div>
 
