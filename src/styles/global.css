@@ -1,2 +1,19 @@
 @import "tailwindcss";
 
+.hero-clip {
+  clip-path: polygon(0 0, 100% 0, 100% 66%, 49% 99%, 49% 99%, 0 67%);
+}
+
+@media (max-width: 500px) {
+  .hero-clip {
+    clip-path: none;
+
+
+  }
+}
+
+@media (max-width: 500px) {
+  #hero-bg {
+    background-position: center 60% !important;
+  }
+}

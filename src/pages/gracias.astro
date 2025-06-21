@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-[#101828] to-[#1F2937] text-white px-4 text-center animate-fade-in">
+    
+    <!-- Ícono animado -->
+    <div class="mb-6">
+      <svg class="w-24 h-24 text-green-400 animate-pop-in" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <circle class="text-green-600 opacity-30" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+        <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+      </svg>
+    </div>
+
+    <!-- Texto -->
+    <h1 class="text-4xl font-extrabold mb-4">¡Gracias por tu mensaje!</h1>
+    <p class="text-lg text-gray-300 max-w-xl mb-8">
+      Lo hemos recibido correctamente y nos pondremos en contacto contigo muy pronto.
+    </p>
+
+    <!-- Botón -->
+    <a href="/" class="inline-block bg-[#5372F0] hover:bg-[#0A256E] text-white px-6 py-3 rounded-lg transition">
+      Volver al inicio
+    </a>
+  </section>
+</Layout>
+
+<style is:global>
+  @keyframes fade-in {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pop-in {
+    0% { opacity: 0; transform: scale(0.6); }
+    80% { transform: scale(1.1); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out both;
+  }
+
+  .animate-pop-in {
+    animation: pop-in 0.6s ease-out both;
+  }
+</style>
